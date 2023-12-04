@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="C:\Users\SU20350495\Downloads\eclipse-java-2021-06-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205" version="16.0.1"/>
+    <libraryInfo home="C:\Users\SU20350495\Downloads\eclipse-java-2021-06-R-win32-x86_64\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_16.0.1.v20210528-1205\jre" version="16.0.1"/>
+    <libraryInfo home="C:\Program Files\Android\Android Studio\jbr" version="17.0.6"/>
+    <libraryInfo home="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64" version="1.8.0_342-342">
+        <bootpath>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\resources.jar"/>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\rt.jar"/>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\sunrsasign.jar"/>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\jsse.jar"/>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\jce.jar"/>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\charsets.jar"/>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\jfr.jar"/>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="C:\Program Files\Java\openlogic-openjdk-8u342-b07-windows-64\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="C:\Program Files\Java\openjdk-20+36_windows-x64_bin\jdk-20" version="20"/>
+    <libraryInfo home="C:\Program Files\Java\openjdk-20+36_windows-x64_bin\jdk-20\bin" version="20"/>
+</libraryInfos>
