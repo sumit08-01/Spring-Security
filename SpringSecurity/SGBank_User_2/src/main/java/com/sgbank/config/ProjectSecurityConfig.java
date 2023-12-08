@@ -5,21 +5,26 @@ import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration // saying it's a configuration class
 public class ProjectSecurityConfig {
 
+	//Custom Security configuration --->>> 
 	@Bean
 	SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-//Custom Security configuration --->>> 
-		http.authorizeHttpRequests(
+
+		http.csrf().disable()
+		.authorizeHttpRequests(
 				(requests) -> requests.requestMatchers("/myAccount", "/myBalance", "/myCards", "/myLoans")
-						.authenticated().requestMatchers("/contact", "/bankNotices").permitAll())
+						.authenticated().requestMatchers("/contact", "/bankNotices", "/register").permitAll())
 				.formLogin();
 		return http.build();
 	}
@@ -62,9 +67,9 @@ public class ProjectSecurityConfig {
 	}
 	
 // this method is saying we use jdbc style of saving user and password in physical database
-	@Bean
-	public UserDetailsService userDetails(DataSource dataSource) {
-		return new JdbcUserDetailsManager(dataSource);
-	}
+//	@Bean
+//	public UserDetailsService userDetails(DataSource dataSource) {
+//		return new JdbcUserDetailsManager(dataSource);
+//	}
 }
 
