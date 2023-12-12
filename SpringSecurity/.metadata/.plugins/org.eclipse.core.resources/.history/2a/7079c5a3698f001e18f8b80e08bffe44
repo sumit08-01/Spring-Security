@@ -1,9 +1,0 @@
-package com.sgbank.controller;
-
-public class ContactController {
-
-	public String saveContactInquiryDetails() {
-		return "Inquiry Details are save in DB";
-		
-	}
-}

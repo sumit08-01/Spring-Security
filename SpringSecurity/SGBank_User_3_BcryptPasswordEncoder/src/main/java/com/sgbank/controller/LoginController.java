@@ -16,7 +16,7 @@ public class LoginController {
 
 	@Autowired
 	private CustomerRepository customerRepository;
-	
+
 	@Autowired
 	private PasswordEncoder passwordEncoder; // autowired for password encoder
 
@@ -25,7 +25,7 @@ public class LoginController {
 		Customer savedCustomer = null;
 		ResponseEntity<String> response = null;
 		try {
-			String encodedPwd = passwordEncoder.encode(customer.getPwd()); // Bcrypt the password 
+			String encodedPwd = passwordEncoder.encode(customer.getPwd()); // Bcrypt the password
 			customer.setPwd(encodedPwd); // set the bcrypt password in customer
 			savedCustomer = customerRepository.save(customer); // same bcrypte password in DB(hashed password)
 			if (savedCustomer.getId() > 0) {

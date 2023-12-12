@@ -1,8 +1,0 @@
-package com.sgbank.controller;
-
-public class LoansController {
-
-	public String getLoanDetails() {
-		return "";
-	}
-}

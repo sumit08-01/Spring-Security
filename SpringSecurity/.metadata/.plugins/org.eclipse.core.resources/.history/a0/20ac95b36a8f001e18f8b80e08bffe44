@@ -1,7 +1,0 @@
-spring:
- security:
-  user:
-   name: sumit
-   password: 12345
-server:
- port: 8090
