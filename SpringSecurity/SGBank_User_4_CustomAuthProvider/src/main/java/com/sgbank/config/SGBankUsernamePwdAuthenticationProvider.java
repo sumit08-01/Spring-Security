@@ -28,16 +28,16 @@ public class SGBankUsernamePwdAuthenticationProvider implements AuthenticationPr
 
 	@Override
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-		String username = authentication.getName();
-		String pwd = authentication.getCredentials().toString();
+		String username = authentication.getName(); // getting username from the UI entered by the user
+		String pwd = authentication.getCredentials().toString(); // getting password from the UI entered by the user
 		System.out.println("username and pwd from UI: " + username + " " + pwd);
-		List<Customer> customer = customerRepository.findByEmail(username);
+		List<Customer> customer = customerRepository.findByEmail(username); // getting password from the DB(encrypted pwd)
 		if (customer.size() > 0) {
-			if (passwordEncoder.matches(pwd, customer.get(0).getPwd())) {
+			if (passwordEncoder.matches(pwd, customer.get(0).getPwd())) { // PasswordEncoder matches method, match the password if okay return true(Returns true if the encoded password should be encoded again for better security,else false. The default implementation always returns false.)
 				System.out.println("Password fetch from DB : " + customer.get(0).getPwd());
 				List<GrantedAuthority> authorities = new ArrayList<>();
-				authorities.add(new SimpleGrantedAuthority(customer.get(0).getRole()));
-				return new UsernamePasswordAuthenticationToken(username, pwd, authorities);
+				authorities.add(new SimpleGrantedAuthority(customer.get(0).getRole())); // this will create a object of SimpleGrantedAuthority and get role from the DB and send to this method
+				return new UsernamePasswordAuthenticationToken(username, pwd, authorities); // this will return the object of the Authentication
 			} else {
 				throw new BadCredentialsException("Invalid User");
 			}
