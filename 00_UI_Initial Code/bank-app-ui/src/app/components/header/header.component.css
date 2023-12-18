@@ -1,29 +1,34 @@
 .i-top-header {
-  height: 70px;
+  height: 80px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.46);
   background-color: #171b1b;
   background-image: linear-gradient(90deg, #000000 0, #000000 100%);
   display: flex;
   position: relative;
 }
+
 .top-section {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
 }
+
 .hleft {
   display: flex;
   align-items: center;
   position: relative;
 }
+
 .hleft .logo {
   margin-right: 18px;
   padding-left: 18px;
 }
+
 .hleft .logo img {
   max-width: 150px;
   display: block;
 }
+
 .hleft .logo .partner-txt {
   position: absolute;
   font-size: 10px;
@@ -39,7 +44,7 @@
 }
 
 .wrapper {
-  width: 100%;
+  width: 120%;
   max-width: 1180px;
   margin: 0 auto;
 }
@@ -55,7 +60,9 @@
   padding-left: 18px;
 }
 
-a, a:link:hover, a:visited:hover {
+a,
+a:link:hover,
+a:visited:hover {
   text-decoration: none;
 }
 
@@ -72,7 +79,7 @@ a:-webkit-any-link {
 }
 
 .hleft .logo img {
-  max-width: 150px;
+  max-width: 80px;
   display: block;
 }
 
@@ -102,11 +109,13 @@ img {
   position: relative;
 }
 
-ul, ul li {
+ul,
+ul li {
   list-style: none;
 }
 
-.hright ul li.active a, .hright ul li:hover a {
+.hright ul li.active a,
+.hright ul li:hover a {
   border-top: 6px solid #57b846;
   padding-top: 20px;
 }
@@ -119,7 +128,9 @@ ul, ul li {
   padding-bottom: 8px;
 }
 
-a, a:link:hover, a:visited:hover {
+a,
+a:link:hover,
+a:visited:hover {
   text-decoration: none;
 }
 
@@ -137,4 +148,3 @@ a, a:link:hover, a:visited:hover {
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-
