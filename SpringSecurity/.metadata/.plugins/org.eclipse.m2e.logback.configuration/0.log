@@ -1609,3 +1609,21 @@
 2023-12-12 12:46:01,849 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-12-12 12:46:01,883 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-12-12 12:46:01,895 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Sumit(lecture Notes)\Spring-Security\SpringSecurity\SGBank_User_4_CustomAuthProvider\src\test\resources
+2023-12-12 15:08:19,455 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-12 15:08:19,526 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-12 15:08:19,564 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Sumit(lecture Notes)\Spring-Security\SpringSecurity\SGBank_User_4_CustomAuthProvider\src\test\resources
+2023-12-12 15:18:40,922 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-12 15:18:40,938 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-12 15:18:40,947 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Sumit(lecture Notes)\Spring-Security\SpringSecurity\SGBank_User_4_CustomAuthProvider\src\test\resources
+2023-12-12 17:12:07,483 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-12 17:12:07,636 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-12 17:12:07,670 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Sumit(lecture Notes)\Spring-Security\SpringSecurity\SGBank_User_4_CustomAuthProvider\src\test\resources
+2023-12-18 11:34:30,409 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-12-18 11:35:04,956 [Worker-4: Decoration Calculation] WARN  org.eclipse.jgit.util.FS_Win32 - null
+2023-12-18 12:54:01,221 [Worker-9: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:SpringSecuritySGBank:0.0.1-SNAPSHOT @ D:\Sumit(lecture Notes)\Spring-Security\SpringSecurity\SGBank_User_5_With_UI\pom.xml.
+2023-12-18 12:54:04,228 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-18 12:54:04,250 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-18 12:54:04,258 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Sumit(lecture Notes)\Spring-Security\SpringSecurity\SGBank_User_5_With_UI\src\test\resources
+2023-12-18 12:54:06,290 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-18 12:54:06,295 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-12-18 12:54:06,301 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\Sumit(lecture Notes)\Spring-Security\SpringSecurity\SGBank_User_5_With_UI\src\test\resources
