@@ -23,6 +23,7 @@ import jakarta.servlet.http.HttpServletRequest;
 public class ProjectSecurityConfig {
 
 //Custom Security configuration --->>> 
+	@SuppressWarnings("removal")
 	@Bean
 	SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
@@ -36,9 +37,7 @@ public class ProjectSecurityConfig {
 					@Override
 					public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
 						CorsConfiguration config = new CorsConfiguration();
-						config.setAllowedOrigins(Collections.singletonList("http://localhost:4200")); // this will allow
-																										// the
-																										// request
+						config.setAllowedOrigins(Collections.singletonList("http://localhost:4200")); // this will allow the request from UI
 						config.setAllowedMethods(Collections.singletonList("*")); // all methods
 						config.setAllowCredentials(true);
 						config.setAllowedHeaders(Collections.singletonList("*")); // all type header
@@ -48,21 +47,24 @@ public class ProjectSecurityConfig {
 				}).and()
 				.csrf((csrf) -> csrf.csrfTokenRequestHandler(requestsHandler)
 						.ignoringRequestMatchers("/contact", "/register")
-						.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())) // that persists the CSRF
-																								// token in a cookie
-																								// named
-																								// * "XSRF-TOKEN" and
-																								// reads from the header
-																								// "X-XSRF-TOKEN"
-																								// following the
-																								// conventions of
-																								// * AngularJS. When
-																								// using with AngularJS
-																								// be sure to use {@link
-																								// #withHttpOnlyFalse()}.
+						.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())) // that persists the CSRF token in a cookie named * "XSRF-TOKEN" and reads from the header  "X-XSRF-TOKEN"
+																							 // following the conventions of * AngularJS. When using with AngularJS be sure to use {@link #withHttpOnlyFalse()}.
 				.addFilterAfter(new CsrfCookieFilter(), BasicAuthenticationFilter.class)
 				.authorizeHttpRequests((requests) -> requests
-						.requestMatchers("/myAccount", "/myBalance", "/myCards", "/myLoans", "/user").authenticated()
+// By Authority Methods
+//						.requestMatchers("/myAccount").hasAuthority("VIEWACCOUNT")
+//						.requestMatchers("/myBalance").hasAnyAuthority("VIEWACCOUNT","VIEWBALANCE")
+//						.requestMatchers("/myLoans").hasAuthority("VIEWLOANS")
+//						.requestMatchers("/myCards").hasAuthority("VIEWCARDS")
+						
+// By Role Methods
+						.requestMatchers("/myAccount").hasRole("VIEWACCOUNT")
+						.requestMatchers("/myBalance").hasAnyRole("VIEWACCOUNT","VIEWBALANCE")
+						.requestMatchers("/myLoans").hasRole("VIEWLOANS")
+						.requestMatchers("/myCards").hasRole("VIEWCARDS")
+						.requestMatchers("/user").authenticated()
+						
+//						.requestMatchers("/myAccount", "/myBalance", "/myCards", "/myLoans", "/user").authenticated()
 						.requestMatchers("/contact", "/notices", "/register").permitAll())
 //				.authorizeHttpRequests((requests) -> requests.anyRequest().authenticated())
 				.formLogin();
