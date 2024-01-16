@@ -17,11 +17,16 @@ export class XhrInterceptor implements HttpInterceptor {
     }
     if (this.user && this.user.password && this.user.email) {
       httpHeaders = httpHeaders.append('Authorization', 'Basic ' + window.btoa(this.user.email + ':' + this.user.password));
-    }
+    } else { // added by sumit
+      let authorization = sessionStorage.getItem('Authorization');
+      if (authorization) {
+        httpHeaders = httpHeaders.append('Authorization', authorization);
+      }
+    } //
 
     let xsrf = sessionStorage.getItem('XSRF-TOKEN'); // added by sumit (me)
-    if (xsrf) {
-      httpHeaders = httpHeaders.append('X-XSRF-TOKEN', xsrf);
+    if (xsrf) {// added by sumit (me)
+      httpHeaders = httpHeaders.append('X-XSRF-TOKEN', xsrf);// added by sumit (me)
     }
 
     httpHeaders = httpHeaders.append('X-Requested-With', 'XMLHttpRequest');
