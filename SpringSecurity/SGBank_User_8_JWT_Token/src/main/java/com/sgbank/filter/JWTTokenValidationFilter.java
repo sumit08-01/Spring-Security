@@ -28,15 +28,10 @@ public class JWTTokenValidationFilter extends OncePerRequestFilter {
 		if (null != jwt) {
 			try {
 				SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes(StandardCharsets.UTF_8));
-				Jwts.builder()
-                .setSigningKey(key)
-                .build()
-                .parseClaimsJws(jwt)
-                .getBody();
-
+				Jwts.parser().verifyWith(key).build().parseSignedClaims(jwt);
 			} catch (Exception e) {
 
-				throw new BadCredentialsException("Invalid Token Recivied");
+				throw new BadCredentialsException("Invalid Token Received");
 			}
 		}
 	}

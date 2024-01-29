@@ -22,7 +22,7 @@ public class AuthoritiesLoggingAfterFilter implements Filter {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
 		if (null != authentication) {
-			LOG.info("User" + authentication.getName() + "is successfully authenticated and has the authorities "
+			LOG.info("User" + authentication.getName() + " is successfully authenticated and has the authorities "
 					+ authentication.getAuthorities().toString());
 		}
 		chain.doFilter(request, response);

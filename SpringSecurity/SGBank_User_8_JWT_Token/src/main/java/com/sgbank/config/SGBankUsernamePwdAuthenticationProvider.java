@@ -34,6 +34,7 @@ public class SGBankUsernamePwdAuthenticationProvider implements AuthenticationPr
 		String pwd = authentication.getCredentials().toString(); // getting password from the UI entered by the user
 		System.out.println("username and pwd from UI: " + username + " " + pwd);
 		List<Customer> customer = customerRepository.findByEmail(username); // getting password from the DB(encrypted pwd)
+		System.out.println(customer + " sumit");
 		if (customer.size() > 0) {
 			if (passwordEncoder.matches(pwd, customer.get(0).getPwd())) { // PasswordEncoder matches method, match the password if okay return true(Returns true if the encoded password should be encoded
 																		  // again for better security,else false. The default implementation always returns false.)
