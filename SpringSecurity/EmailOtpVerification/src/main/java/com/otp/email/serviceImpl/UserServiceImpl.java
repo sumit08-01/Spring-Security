@@ -58,14 +58,14 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void verify(String email, String otp) {
 		User user = userRepository.findByEmail(email);
-		if(user == null) {
+		if (user == null) {
 			throw new RuntimeException("User Not found");
-		}else if(user.isVerified()) {
+		} else if (user.isVerified()) {
 			throw new RuntimeException("User is already verified");
-		}else if(otp.equals(user.getOtp())) {
+		} else if (otp.equals(user.getOtp())) {
 			user.setVerified(true);
 			userRepository.save(user);
-		}else {
+		} else {
 			throw new RuntimeException("Internal Server Error");
 		}
 	}
@@ -73,9 +73,9 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User login(String email, String password) {
 		User byEmail = userRepository.findByEmail(email);
-		if(byEmail != null && byEmail.isVerified() && byEmail.getPassword().equals(password)) {
+		if (byEmail != null && byEmail.isVerified() && byEmail.getPassword().equals(password)) {
 			return byEmail;
-		}else {
+		} else {
 			throw new RuntimeException("Internal Server Error");
 		}
 	}
